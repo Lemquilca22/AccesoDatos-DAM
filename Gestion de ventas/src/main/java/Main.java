@@ -7,6 +7,7 @@ import model.PedidoProducto;
 import model.Producto;
 import model.Usuario;
 
+import java.io.Console;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.format.DateTimeFormatter;
@@ -24,27 +25,68 @@ public class Main {
     private static final ProductoDAO productoDAO = new ProductoDAO();
     private static final PedidoDAO pedidoDAO = new PedidoDAO();
 
+    private static final int MAX_INTENTOS_LOGIN = 3;
+    private static Usuario usuarioActual;
+
     public static void main(String[] args) {
         cargarDatosDePrueba();
 
-        int opcion;
-        do {
+        boolean salir = false;
+        while (!salir) {
+            usuarioActual = login();
+            if (usuarioActual == null) {
+                System.out.println("Demasiados intentos fallidos. Saliendo del programa.");
+                return;
+            }
+            salir = menuPrincipal();
+        }
+        System.out.println("¡Hasta pronto!");
+    }
+
+    private static Usuario login() {
+        System.out.println("\n===== INICIO DE SESIÓN =====");
+        for (int intento = 1; intento <= MAX_INTENTOS_LOGIN; intento++) {
+            String email = leerTexto("Email: ");
+            String password = leerPassword("Contraseña: ");
+            Usuario u = usuarioDAO.login(email, password);
+            if (u != null) {
+                System.out.println("Bienvenido/a, " + u.getNombre() + ".");
+                return u;
+            }
+            int restantes = MAX_INTENTOS_LOGIN - intento;
+            System.out.println("Email o contraseña incorrectos."
+                    + (restantes > 0 ? " Intentos restantes: " + restantes : ""));
+        }
+        return null;
+    }
+
+    private static boolean menuPrincipal() {
+        while (true) {
             System.out.println("\n===== GESTIÓN DE VENTAS - TIENDA DE BEBIDAS =====");
+            System.out.println("Sesión: " + usuarioActual.getNombre() + " (" + usuarioActual.getEmail() + ")");
             System.out.println("1. Usuarios");
             System.out.println("2. Productos");
             System.out.println("3. Pedidos");
             System.out.println("4. Informes de ventas");
+            System.out.println("9. Cerrar sesión");
             System.out.println("0. Salir");
-            opcion = leerEntero("Opción: ");
+            int opcion = leerEntero("Opción: ");
             switch (opcion) {
                 case 1 -> menuUsuarios();
                 case 2 -> menuProductos();
                 case 3 -> menuPedidos();
                 case 4 -> menuInformes();
-                case 0 -> System.out.println("¡Hasta pronto!");
+                case 9 -> {
+                    System.out.println("Sesión cerrada.");
+                    usuarioActual = null;
+                    return false;
+                }
+                case 0 -> {
+                    return true;
+                }
                 default -> System.out.println("Opción no válida.");
             }
-        } while (opcion != 0);
+        }
     }
 
 
@@ -92,7 +134,8 @@ public class Main {
         }
         String telefono = leerTexto("Teléfono: ");
         String direccion = leerTexto("Dirección: ");
-        Usuario u = usuarioDAO.insertar(new Usuario(0, nombre, email, telefono, direccion));
+        String password = leerNuevaPassword();
+        Usuario u = usuarioDAO.insertar(new Usuario(0, nombre, email, telefono, direccion, password));
         System.out.println("Usuario creado con ID " + u.getId_usuario());
     }
 
@@ -104,6 +147,8 @@ public class Main {
         String email = leerTextoOpcional("Email [" + u.getEmail() + "]: ");
         String telefono = leerTextoOpcional("Teléfono [" + u.getTelefono() + "]: ");
         String direccion = leerTextoOpcional("Dirección [" + u.getDireccion() + "]: ");
+        boolean cambiarPassword = leerSiNo("¿Cambiar la contraseña? (s/n): ");
+        String password = cambiarPassword ? leerNuevaPassword() : null;
 
         if (!email.isEmpty()) {
             if (!esEmailValido(email)) {
@@ -120,6 +165,7 @@ public class Main {
         if (!nombre.isEmpty()) u.setNombre(nombre);
         if (!telefono.isEmpty()) u.setTelefono(telefono);
         if (!direccion.isEmpty()) u.setDireccion(direccion);
+        if (password != null) u.setPassword(password);
 
         usuarioDAO.actualizar(u);
         System.out.println("Usuario actualizado.");
@@ -128,6 +174,10 @@ public class Main {
     private static void bajaUsuario() {
         Usuario u = pedirUsuario();
         if (u == null) return;
+        if (u.getId_usuario() == usuarioActual.getId_usuario()) {
+            System.out.println("No puedes eliminar el usuario con el que has iniciado sesión.");
+            return;
+        }
         if (!pedidoDAO.obtenerPorUsuario(u.getId_usuario()).isEmpty()) {
             System.out.println("No se puede eliminar: el usuario tiene pedidos registrados.");
             return;
@@ -553,6 +603,28 @@ public class Main {
         return sc.nextLine().trim();
     }
 
+    private static String leerPassword(String mensaje) {
+        Console consola = System.console();
+        if (consola != null && consola.isTerminal()) {
+            char[] password = consola.readPassword(mensaje);
+            return password == null ? "" : new String(password);
+        }
+        System.out.print(mensaje);
+        return sc.nextLine();
+    }
+
+    private static String leerNuevaPassword() {
+        while (true) {
+            String password = leerPassword("Contraseña (mínimo 4 caracteres): ");
+            if (password.length() < 4) {
+                System.out.println("La contraseña es demasiado corta.");
+                continue;
+            }
+            if (password.equals(leerPassword("Repite la contraseña: "))) return password;
+            System.out.println("Las contraseñas no coinciden.");
+        }
+    }
+
     private static String leerEmail(String mensaje) {
         while (true) {
             String email = leerTexto(mensaje);
@@ -595,9 +667,9 @@ public class Main {
 
 
     private static void cargarDatosDePrueba() {
-        Usuario ana = usuarioDAO.insertar(new Usuario(0, "Ana García", "ana@correo.com", "600111222", "C/ Mayor 1, Madrid"));
-        Usuario luis = usuarioDAO.insertar(new Usuario(0, "Luis Pérez", "luis@correo.com", "600333444", "Av. del Puerto 22, Valencia"));
-        usuarioDAO.insertar(new Usuario(0, "Marta López", "marta@correo.com", "600555666", "C/ Sierpes 5, Sevilla"));
+        Usuario ana = usuarioDAO.insertar(new Usuario(0, "Ana García", "ana@correo.com", "600111222", "C/ Mayor 1, Madrid", "1234"));
+        Usuario luis = usuarioDAO.insertar(new Usuario(0, "Luis Pérez", "luis@correo.com", "600333444", "Av. del Puerto 22, Valencia", "1234"));
+        usuarioDAO.insertar(new Usuario(0, "Marta López", "marta@correo.com", "600555666", "C/ Sierpes 5, Sevilla", "1234"));
 
         Producto agua = productoDAO.insertar(new Producto("Agua mineral 1.5L", new BigDecimal("0.60"), true));
         Producto cola = productoDAO.insertar(new Producto("Refresco de cola 2L", new BigDecimal("1.85"), true));

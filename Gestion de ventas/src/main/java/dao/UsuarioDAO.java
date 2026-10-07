@@ -30,6 +30,14 @@ public class UsuarioDAO {
         return null;
     }
 
+    public Usuario login(String email, String password) {
+        Usuario u = obtenerPorEmail(email);
+        if (u != null && u.getPassword() != null && u.getPassword().equals(password)) {
+            return u;
+        }
+        return null;
+    }
+
     public List<Usuario> buscarPorNombre(String texto) {
         List<Usuario> resultado = new ArrayList<>();
         for (Usuario u : tabla.values()) {

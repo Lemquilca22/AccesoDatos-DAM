@@ -6,6 +6,7 @@ public class Usuario {
     private String email;
     private String telefono;
     private String direccion;
+    private String password;
 
     public Usuario(){};
     public Usuario(int id_usuario, String nombre, String email, String telefono, String direccion) {
@@ -14,6 +15,11 @@ public class Usuario {
         this.email = email;
         this.telefono = telefono;
         this.direccion = direccion;
+    }
+
+    public Usuario(int id_usuario, String nombre, String email, String telefono, String direccion, String password) {
+        this(id_usuario, nombre, email, telefono, direccion);
+        this.password = password;
     }
 
     public int getId_usuario() {
@@ -54,5 +60,13 @@ public class Usuario {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
