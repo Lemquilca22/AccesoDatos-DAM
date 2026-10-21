@@ -13,6 +13,7 @@ public class GestorDirectorios {
         Path rutaPedidos =  Paths.get("tienda/pedidos");
         Path rutaLogs =  Paths.get("tienda/logs");
         Path rutaConversiones =  Paths.get("tienda/conversiones");
+        Path rutabackup =   Paths.get("tienda/backup");
 
         Files.createDirectories(rutaUsuarios);
         Files.createDirectories(rutaProductos);
