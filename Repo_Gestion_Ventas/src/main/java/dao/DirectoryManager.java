@@ -12,11 +12,15 @@ public class DirectoryManager {
         Path logsPath = Paths.get("data/logs");
         Path backupPath = Paths.get("data/backup");
         Path productosPath = Paths.get("data/productos");
+        Path usuariosPath = Paths.get("data/usuarios");
+        Path pedidosPath = Paths.get("data/pedidos");
 
         Files.createDirectories(dataPath);
         Files.createDirectories(logsPath);
         Files.createDirectories(backupPath);
         Files.createDirectories(productosPath);
+        Files.createDirectories(usuariosPath);
+        Files.createDirectories(pedidosPath);
 
         System.out.println("Estructura de directorios './data' creada correctamente.");
     }
