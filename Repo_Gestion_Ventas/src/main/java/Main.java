@@ -1,28 +1,31 @@
+import dao.AuditLogger;
 import dao.DirectoryManager;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        DirectoryManager g = new DirectoryManager();
-        String ruta = "";
-        g.iniciarEstructura();
+        try {
+            System.out.println("=== [FASE 2] GESTIÓN Y CREACIÓN DE DIRECTORIOS ===");
 
-        System.out.println("Selecciona la ruta a inspeccionar: ");
-        System.out.println("1. Logs");
-        System.out.println("2. Backup");
-        System.out.println("3. Productos");
+            DirectoryManager.iniciarEstructura();
 
-        int eleccion = sc.nextInt();
-        switch (eleccion) {
-            case 1:
-                ruta = "data/logs";
-            case 2:
-                ruta = "data/backup";
-            case 3:
-                ruta = "data/productos";
+            DirectoryManager.inspeccionarDirectorio("data");
+
+            System.out.println("\n=== [FASE 3] FLUIDOS DE TEXTO Y AUDITORÍA ===");
+
+            AuditLogger.registrarLog("INFO", "Sistema de Gestión de Ventas inicializado con éxito.");
+            AuditLogger.registrarLog("SUCCESS", "Directorios de productos, usuarios y pedidos verificados.");
+            AuditLogger.registrarLog("WARNING", "Comprobando integridad del almacenamiento local.");
+
+
+            AuditLogger.buscarPalabraClave("INFO");
+
+            System.out.println("\n¡Fases ejecutadas y validadas correctamente!");
+
+        } catch (Exception e) {
+            System.err.println("Error  en la ejecución del sistema: " + e.getMessage());
+            e.printStackTrace();
         }
-        g.inspeccionarDirectorio(ruta);
-    }
+}
 }
