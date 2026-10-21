@@ -1,9 +1,9 @@
-import service.GestorDirectorios;
+import dao.DirectoryManager;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        GestorDirectorios g = new GestorDirectorios();
+        DirectoryManager g = new DirectoryManager();
 
         g.iniciarEstructura();
     }
