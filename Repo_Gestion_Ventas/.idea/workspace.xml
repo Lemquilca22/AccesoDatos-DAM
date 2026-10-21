@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/config/DatabaseConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/PedidoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/ProductoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/UsuarioDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/EstadoPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/PedidoProducto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AuditLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AuditLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DirectoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DirectoryManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +70,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "nuevaramaLem",
+    "git-widget-placeholder": "Merging nuevaramaLem",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
