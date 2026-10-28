@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="GestionDeventas" />
         <module name="Repo_Gestion_Ventas" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="GestionDeventas" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

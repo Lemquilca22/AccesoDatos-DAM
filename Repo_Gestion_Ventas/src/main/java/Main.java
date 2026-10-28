@@ -1,6 +1,10 @@
 import dao.AuditLogger;
 import dao.DirectoryManager;
+import dao.ProductoDao;
+import model.Producto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +25,19 @@ public class Main {
 
             AuditLogger.buscarPalabraClave("INFO");
 
-            System.out.println("\n¡Fases ejecutadas y validadas correctamente!");
+            System.out.println("\n=== [FASE 4] SERIALIZACIÓN DE INVENTARIO ===");
+
+            List<Producto> inventario = new ArrayList<>();
+            inventario.add(new Producto(1, "Teclado mecánico", 59.99, 20, "Periféricos"));
+            inventario.add(new Producto(2, "Monitor 27\"", 219.50, 8, "Pantallas"));
+            inventario.add(new Producto(3, "Ratón inalámbrico", 24.90, 35, "Periféricos"));
+
+            ProductoDao.guardarInventario(inventario);
+
+            List<Producto> recuperados = ProductoDao.cargarInventario();
+            recuperados.forEach(System.out::println);
+
+            System.out.println("Funciona, SIUUUUUUUUUUUUUU");
 
         } catch (Exception e) {
             System.err.println("Error  en la ejecución del sistema: " + e.getMessage());
