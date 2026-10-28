@@ -29,7 +29,7 @@ public class DirectoryManager {
     public static void inspeccionarDirectorio(String rutaStr) {
         Path ruta = Paths.get(rutaStr);
         try {
-            System.out.println("\n--- 🔍 INSPECCIÓN DE DIRECTORIO ---");
+            System.out.println("\n--- INSPECCIÓN DE DIRECTORIO ---");
             System.out.println("Ruta Absoluta: " + ruta.toAbsolutePath());
             System.out.println("¿Existe físicamente?: " + Files.exists(ruta));
             System.out.println("Permisos - Es legible: " + Files.isReadable(ruta));
