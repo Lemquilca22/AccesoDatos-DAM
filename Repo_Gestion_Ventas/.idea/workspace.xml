@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/config/DatabaseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/PedidoDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/ProductoDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/UsuarioDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/EstadoPedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Pedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/PedidoProducto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Producto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DirectoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DirectoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/audit.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/audit.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,16 +42,17 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging nuevaramaLem",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;nuevaramaLem&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="" />
