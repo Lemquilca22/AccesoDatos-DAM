@@ -1,7 +1,11 @@
 package model;
+
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Pedido {
+public class Pedido implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private int idPedido;
     private int idUsuario;
     private LocalDateTime fecha;
@@ -14,21 +18,17 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public int getIdPedido() {
-        return idPedido;
-    }
+    public int getIdPedido() { return idPedido; }
+    public void setIdPedido(int idPedido) { this.idPedido = idPedido; }
 
-    public void setIdPedido(int idPedido) {
-        this.idPedido = idPedido;
-    }
+    public int getIdUsuario() { return idUsuario; }
+    public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
 
-    public EstadoPedido getEstado() {
-        return estado;
-    }
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
 
-    public void setEstado(EstadoPedido estado) {
-        this.estado = estado;
-    }
+    public EstadoPedido getEstado() { return estado; }
+    public void setEstado(EstadoPedido estado) { this.estado = estado; }
 
     @Override
     public String toString() {

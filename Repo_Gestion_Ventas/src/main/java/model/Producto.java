@@ -1,53 +1,42 @@
 package model;
+
 import java.io.Serializable;
-public class Producto {
-    private int idProducto;
-    private String nombreProducto;
+
+public class Producto implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private int id;
+    private String nombre;
     private double precio;
-    private boolean disponible;
+    private int stock;
+    private String categoria;
 
-    public Producto(int idProducto, String nombreProducto, double precio, boolean disponible) {
-        this.idProducto = idProducto;
-        this.nombreProducto = nombreProducto;
+    public Producto(int id, String nombre, double precio, int stock, String categoria) {
+        this.id = id;
+        this.nombre = nombre;
         this.precio = precio;
-        this.disponible = disponible;
+        this.stock = stock;
+        this.categoria = categoria;
     }
 
-    public int getIdProducto() {
-        return idProducto;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
-    }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
 
-    public String getNombreProducto() {
-        return nombreProducto;
-    }
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
 
-    public void setNombreProducto(String nombreProducto) {
-        this.nombreProducto = nombreProducto;
-    }
+    public int getStock() { return stock; }
+    public void setStock(int stock) { this.stock = stock; }
 
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public boolean isDisponible() {
-        return disponible;
-    }
-
-    public void setDisponible(boolean disponible) {
-        this.disponible = disponible;
-    }
+    public String getCategoria() { return categoria; }
+    public void setCategoria(String categoria) { this.categoria = categoria; }
 
     @Override
     public String toString() {
-        return "Producto [ID=" + idProducto + ", Nombre=" + nombreProducto +
-                ", Precio=" + precio + "€, Disponible=" + (disponible ? "Sí" : "No") + "]";
+        return "Producto [ID=" + id + ", Nombre=" + nombre + ", Precio=" + precio +
+                "€, Stock=" + stock + ", Categoria=" + categoria + "]";
     }
 }

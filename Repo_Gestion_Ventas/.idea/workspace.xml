@@ -4,11 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8475fed8-60c3-430f-b4ca-d0c45478e22e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/AccesoDatos-DAM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/logs/audit.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/productos/inventario.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AccesoDirectoProductos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AuditLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/DirectoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ProductoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data/logs/audit.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data/productos/inventario.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/config/DatabaseConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/PedidoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/ProductoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/dao/UsuarioDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/EstadoPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/PedidoProducto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion de ventas/src/main/java/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion_Ventas_repo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DetallePedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DetallePedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/GestorDirectorios.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/GestorSerial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/GestorSerial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/GestorTexto.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +59,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="ramaLem" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -44,7 +78,7 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="3KgOSN2xnYEkAE1P72niFRzERsu" />
   <component name="ProjectViewState">
@@ -52,24 +86,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "ramaLem",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging ramaLem",
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8475fed8-60c3-430f-b4ca-d0c45478e22e" name="Changes" comment="" />
-      <created>1791975746191</created>
+      <changelist id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="" />
+      <created>1792577170859</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1791975746191</updated>
+      <updated>1792577170859</updated>
     </task>
     <servers />
   </component>
