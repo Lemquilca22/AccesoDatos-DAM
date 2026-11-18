@@ -1,3 +1,4 @@
+import dao.AccesoDirectoProductos;
 import dao.AuditLogger;
 import dao.DirectoryManager;
 import dao.ProductoDao;
@@ -36,6 +37,20 @@ public class Main {
 
             List<Producto> recuperados = ProductoDao.cargarInventario();
             recuperados.forEach(System.out::println);
+
+            System.out.println("\n=== [FASE 5] ACCESO ALEATORIO DIRECTO ===");
+
+            AccesoDirectoProductos.guardarTodos(recuperados);
+            System.out.println("Registros en el fichero: " + AccesoDirectoProductos.numeroRegistros());
+
+            System.out.println("Antes:   " + AccesoDirectoProductos.leerProducto(1));
+            AccesoDirectoProductos.actualizarStockDirecto(1, 99);
+            System.out.println("Después: " + AccesoDirectoProductos.leerProducto(1));
+
+            AccesoDirectoProductos.actualizarStockDirecto(50, 10);
+
+            System.out.println("Contenido completo del fichero de acceso directo:");
+            AccesoDirectoProductos.leerTodos().forEach(System.out::println);
 
             System.out.println("Funciona, SIUUUUUUUUUUUUUU");
 

@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -33,8 +34,8 @@ public class AuditLogger {
             }
             System.out.println("Log registrado: " + lineaLog);
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            System.err.println("No se pudo escribir en el log de auditoría: " + e.getMessage());
         }
 
     }
@@ -50,8 +51,10 @@ public class AuditLogger {
             }
             System.out.println("Búsqueda finalizada. Total de coincidencias: " + contador);
 
+        } catch (NoSuchFileException e) {
+            System.err.println("El archivo de log todavía no existe: " + e.getFile());
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("Error al leer el log de auditoría: " + e.getMessage());
         }
     }
 }
