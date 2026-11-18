@@ -50,6 +50,7 @@ public class AccesoDirectoProductos {
             System.err.println("Error al actualizar el stock directamente: " + e.getMessage());
         }
     }
+    //Analizamos proxima clasee
 
     public static Producto leerProducto(long posicionRegistro) {
         try (RandomAccessFile raf = new RandomAccessFile(RUTA_ARCHIVO.toFile(), "r")) {
