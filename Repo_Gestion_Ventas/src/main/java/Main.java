@@ -3,8 +3,8 @@ import dao.AuditLogger;
 import dao.DirectoryManager;
 import dao.ProductoDao;
 import model.Producto;
+import util.DatosPrueba;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,10 +28,7 @@ public class Main {
 
             System.out.println("\n=== [FASE 4] SERIALIZACIÓN DE INVENTARIO ===");
 
-            List<Producto> inventario = new ArrayList<>();
-            inventario.add(new Producto(1, "Teclado mecánico", 59.99, 20, "Periféricos"));
-            inventario.add(new Producto(2, "Monitor 27\"", 219.50, 8, "Pantallas"));
-            inventario.add(new Producto(3, "Ratón inalámbrico", 24.90, 35, "Periféricos"));
+            List<Producto> inventario = DatosPrueba.productos();
 
             ProductoDao.guardarInventario(inventario);
 
