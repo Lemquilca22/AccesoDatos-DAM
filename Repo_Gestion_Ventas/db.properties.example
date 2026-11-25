@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3309/NOMBRE_BD?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Europe/Madrid
+db.user=root
+db.password=root
