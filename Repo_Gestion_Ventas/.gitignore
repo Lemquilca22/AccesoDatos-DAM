@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Configuracion local de BD (cada uno la suya) ###
+db.properties
