@@ -8,33 +8,42 @@ import java.util.List;
  * Pedido tal y como está en la tabla {@code pedido} de MySQL (RA2), junto con sus líneas
  * (tabla {@code pedido_producto}, que se representan con {@link DetallePedido}).
  * <p>
+ * La tabla no guarda el total: se calcula sumando las líneas ({@link #calcularTotal()}).
+ * <p>
  * No sustituye a {@link Pedido}, que se mantiene para RA1.
  */
 public class PedidoBD {
 
     private int idPedido;               // id_pedido (AUTO_INCREMENT)
     private int idUsuario;              // id_usuario (FK)
-    private LocalDateTime fechaPedido;  // fecha_pedido DATETIME
-    private double precioTotal;         // precio_total DECIMAL(10,2)
+    private LocalDateTime fecha;        // fecha DATETIME
+    private EstadoPedido estado;        // estado VARCHAR(50) -> se guarda con estado.name()
     private List<DetallePedido> lineas = new ArrayList<>();
 
     /** Para leer filas de la BD (ya tienen id). */
-    public PedidoBD(int idPedido, int idUsuario, LocalDateTime fechaPedido, double precioTotal) {
+    public PedidoBD(int idPedido, int idUsuario, LocalDateTime fecha, EstadoPedido estado) {
         this.idPedido = idPedido;
         this.idUsuario = idUsuario;
-        this.fechaPedido = fechaPedido;
-        this.precioTotal = precioTotal;
+        this.fecha = fecha;
+        this.estado = estado;
     }
 
-    /** Para crear un pedido nuevo: el id lo genera MySQL y el total sale de las líneas. */
-    public PedidoBD(int idUsuario, LocalDateTime fechaPedido) {
-        this(0, idUsuario, fechaPedido, 0);
+    /** Para crear un pedido nuevo: el id lo genera MySQL y empieza PENDIENTE. */
+    public PedidoBD(int idUsuario, LocalDateTime fecha) {
+        this(0, idUsuario, fecha, EstadoPedido.PENDIENTE);
     }
 
-    /** Añade una línea al pedido y actualiza el total. */
     public void addLinea(DetallePedido linea) {
         lineas.add(linea);
-        precioTotal += linea.calcularSubtotal();
+    }
+
+    /** Total del pedido = suma de los subtotales de sus líneas. */
+    public double calcularTotal() {
+        double total = 0;
+        for (DetallePedido linea : lineas) {
+            total += linea.calcularSubtotal();
+        }
+        return total;
     }
 
     public int getIdPedido() { return idPedido; }
@@ -43,17 +52,17 @@ public class PedidoBD {
     public int getIdUsuario() { return idUsuario; }
     public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
 
-    public LocalDateTime getFechaPedido() { return fechaPedido; }
-    public void setFechaPedido(LocalDateTime fechaPedido) { this.fechaPedido = fechaPedido; }
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
 
-    public double getPrecioTotal() { return precioTotal; }
-    public void setPrecioTotal(double precioTotal) { this.precioTotal = precioTotal; }
+    public EstadoPedido getEstado() { return estado; }
+    public void setEstado(EstadoPedido estado) { this.estado = estado; }
 
     public List<DetallePedido> getLineas() { return lineas; }
 
     @Override
     public String toString() {
-        return "Pedido [ID=" + idPedido + ", ID Usuario=" + idUsuario + ", Fecha=" + fechaPedido +
-                ", Total=" + precioTotal + "€, Líneas=" + lineas.size() + "]";
+        return "Pedido [ID=" + idPedido + ", ID Usuario=" + idUsuario + ", Fecha=" + fecha +
+                ", Estado=" + estado + ", Total=" + calcularTotal() + "€, Líneas=" + lineas.size() + "]";
     }
 }

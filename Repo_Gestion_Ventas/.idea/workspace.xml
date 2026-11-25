@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccesoDirectoProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccesoDirectoProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/audit.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/audit.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/productos/inventario.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/productos/inventario.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +46,35 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "ramaLem",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.MainApp" />
+      <module name="Repo_Gestion_Ventas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="da63220f-3b52-4fc6-8d16-11bcd61c3880" name="Changes" comment="" />

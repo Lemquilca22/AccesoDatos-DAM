@@ -17,3 +17,11 @@
 [2026-11-18 11:31:13] [WARNING] Comprobando integridad del almacenamiento local.
 [2026-11-18 11:31:13] [SUCCESS] Inventario guardado: 3 productos.
 [2026-11-18 11:31:13] [INFO] Inventario cargado: 3 productos.
+[2026-11-18 12:49:21] [INFO] Sistema de Gestión de Ventas inicializado con éxito.
+[2026-11-18 12:49:21] [SUCCESS] Directorios de productos, usuarios y pedidos verificados.
+[2026-11-18 12:49:21] [WARNING] Comprobando integridad del almacenamiento local.
+[2026-11-18 12:49:21] [SUCCESS] Inventario guardado: 5 productos.
+[2026-11-18 12:49:21] [INFO] Inventario cargado: 5 productos.
+[2026-11-18 12:49:21] [SUCCESS] Fichero de acceso directo generado con 5 registros.
+[2026-11-18 12:49:21] [INFO] Stock del registro 1 actualizado a 99
+[2026-11-18 12:50:00] [INFO] Aplicación iniciada desde MainApp.
