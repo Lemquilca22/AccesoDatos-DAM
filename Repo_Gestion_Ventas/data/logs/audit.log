@@ -25,3 +25,6 @@
 [2026-11-18 12:49:21] [SUCCESS] Fichero de acceso directo generado con 5 registros.
 [2026-11-18 12:49:21] [INFO] Stock del registro 1 actualizado a 99
 [2026-11-18 12:50:00] [INFO] Aplicación iniciada desde MainApp.
+[2026-11-25 13:13:55] [INFO] Aplicación iniciada desde MainApp.
+[2026-11-25 13:14:18] [INFO] Inventario cargado: 5 productos.
+[2026-11-25 13:15:00] [INFO] Stock del registro 0 actualizado a 5
